@@ -1,0 +1,74 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory used by npm, yarn, etc.
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output directories (depending on your build tool)
+dist/
+build/
+out/
+public/assets/
+
+# IDEs and text editors
+*.iml
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.sublime*
+*.sublime-project
+*.sublime-workspace
+
+# OS meta files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.tmp.*
+*.bak
+*.swp
+*.log
+*.tlog
+
+# Testing
+coverage/
+
+# Environment configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js
+.next/
+
+# TypeScript type checker
+.tscache/
+
+# Environment variables (if you have any secrets or environment-specific configs)
+.env
