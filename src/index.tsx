@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App'; // Assuming you have an App.tsx file as your root component
+import PageRouter from './components/PageRouter';
 
 // If you're using service workers (with Create React App for example)
 // import * as serviceWorker from './serviceWorker';
@@ -10,7 +11,7 @@ import App from './App'; // Assuming you have an App.tsx file as your root compo
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PageRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,17 @@
+.TopBar {
+    width: 100vw;
+    height: 20vh;
+    border-bottom: 2px inset coral;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menuItemContainer {
+    display: flex;
+    align-items: center;
+    color: peru;
+}
