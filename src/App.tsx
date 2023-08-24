@@ -10,8 +10,7 @@ function App({ children }: { children: React.ReactNode }) {
     <div className={styles.app}>
   
       {children} 
-      
-      <footer>Footer</footer>
+
     </div>
   );
 }

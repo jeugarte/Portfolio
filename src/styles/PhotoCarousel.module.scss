@@ -1,0 +1,53 @@
+.carouselContainer {
+    margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  overflow: visible;
+    
+    // If there's a more specific container in react-slick causing the issue
+    .slick-list {
+        overflow: visible;
+    }
+  
+}
+
+.forwardButton {
+    display: flex;
+    justify-content: center;  // centers content horizontally
+    align-items: center;
+    cursor: pointer;      // centers content vertically
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    background: rgb( 88,204,2 );
+    box-shadow: 0 8px 0 black, 0 8px 0 rgb( 88,204,2 );
+    border-radius: 50%/50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-list {
+    border-radius: 20px !important;
+}
+
+.slick-slider .slick-track, 
+.slick-slider .slick-list {
+    border-radius: 20px !important;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-7px);
+    }
+  }
+
+.bouncingSlide {
+    animation: bounce 1s;
+}
+

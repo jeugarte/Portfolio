@@ -1,0 +1,25 @@
+.photoContainer {
+    width: 20vw;
+    height: 50vh;
+    border-radius: 20px;
+    border: 4px inset RGB(38, 42, 45);
+    background-size: cover;
+    background-position: center;
+    position:relative
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(50px);
+    }
+}
+
+.bounce {
+    animation: bounce 3s;
+}

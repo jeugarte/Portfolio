@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
+import ProjectsPage from '../pages/ProjectsPage';
 import App from '../App';
 import TopBar from './TopBar';
 
@@ -24,6 +25,7 @@ const PageRouter: React.FC = () => {
         <Route element={<AboutPage />} path="/about" />
         <Route element={<ContactPage />} path="/contact" />
         <Route element={<HomePage />} path="/home" />
+        <Route element={<ProjectsPage />} path="/projects" />
         <Route path="*" element={<NavigateToHome />} />
 
     </Routes>
