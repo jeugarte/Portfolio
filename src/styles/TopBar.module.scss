@@ -1,0 +1,76 @@
+.TopBar {
+    width: 100vw;
+    height: 12vh;
+    border-bottom: 4px inset black;
+    background-color: RGB(38, 42, 45);
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: inherit;
+}
+
+.menuSelections {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: white;
+}
+
+.menuItemContainer {
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    animation: destroyShadow 0.5s ease-in;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation: createShadow 0.5s ease-in;
+        animation-fill-mode: forwards;
+    }
+}
+
+.mainIcons {
+    display: flex;
+    padding-left: 50px;
+}
+
+@keyframes createShadow {
+    0% {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+
+    100% {
+        box-shadow: 4px 10px 0px 0px black;
+        color: RGB(141, 207, 251);
+    }
+}
+
+@keyframes destroyShadow {
+    0% {
+        box-shadow: 4px 10px 0px 0px black;
+        color: RGB(141, 207, 251);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+}
+
+.menuItem {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 100px;
+    color: inherit;
+}
+
+.icon {
+    padding-right: 10px;
+    padding-top: 5px;
+}

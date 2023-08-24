@@ -1,0 +1,25 @@
+.projectsPageContainer {
+    display: flex;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:85vw;
+}
+
+.lottieCoding {
+    width: 60vw;
+    height: 60vh;
+}
+
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15vw;
+    height: 87vh;
+    margin-left: 100px;
+}
