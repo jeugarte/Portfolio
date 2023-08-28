@@ -36,11 +36,13 @@
 
 .subsection {
     text-align: center;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     color: #455c5a;
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 110px;
 }
+
 
 .icon {
     padding-right: 50px;
@@ -51,3 +53,136 @@
     justify-content: center;
     margin-right: 140px;
 }
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.featureLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.featureRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.featureHeader {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: RGB(38, 42, 45);
+}
+
+.featureContent {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.featureContentRight {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.featureText {
+    color: #455c5a;
+    font-size: 20px;
+}
+
+.featureTextRight {
+    color: #455c5a;
+    font-size: 20px;
+}
+
+.featureGIF {
+    flex: 1;
+    max-width: 50%;
+    img {
+        max-width: 400px;
+        max-height: 300px;
+        width: auto; 
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.featureGIFBA {
+    img {
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.featureGIFMid {
+    flex: 1;
+    max-width: 50%;
+    padding-top: 40px;
+    img {
+        width: 100%; 
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.featureBeforeAfter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    flex: 1;
+    img {
+        width: 100%; // Full width of its container
+        height: auto; // Keep aspect ratio
+      }
+}
+
+@keyframes highlightfeature {
+    100% {
+        background-color: #CCFFCC;
+    }
+}
+
+.featureArrow {
+    border-radius: 5px;
+    &:hover {
+        animation: highlightfeature 1s ease-in
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .reveal {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .reveal-on-scroll {
+    animation: fadeIn 1s ease-out;
+    opacity: 1;
+  }
+  
