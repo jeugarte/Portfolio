@@ -27,12 +27,14 @@ const TopBar = () => {
                 </div>
                 <ul className={styles.menuSelections}>
                     {menuSelections.map( (item, index) => (
-                        <li className={styles.menuItemContainer} key={index}>
-                            <div className={styles.icon}>
-                                {item.Component && <item.Component />}
-                            </div>
-                            <Link className={styles.menuItem} to={item.path}>{item.text}</Link>
+                        <Link to={item.path} key={index} style={{ textDecoration: 'none' }}>
+                        <li className={styles.menuItemContainer}>
+                          <div className={styles.icon}>
+                            {item.Component && <item.Component />}
+                          </div>
+                          <div className={styles.menuItem}>{item.text}</div>
                         </li>
+                      </Link>
                     ))}
                 </ul>
             </div>
