@@ -24,7 +24,8 @@ const DuoreadsPage = () => {
             by parsing books into digestable paragraphs/sections and displaying the progress bar. While 
             there is no sound, the noteable Duolingo *Dink* sounds effect is played as they reach the 
             end of the chapter. These features set benchmarks for the user and makes the experience of 
-            Duoreads gamified & user-friendly.`,
+            Duoreads gamified & user-friendly. I was tasked with parsing the books into their respective 
+            lessons.`,
             gif: LessonsGIF,
         },
         {

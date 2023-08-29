@@ -1,6 +1,5 @@
 .TopBar {
-    width: 100vw;
-    height: 12vh;
+    width: 100%;
     border-bottom: 4px inset black;
     background-color: RGB(38, 42, 45);
 }
@@ -14,9 +13,16 @@
 
 .menuSelections {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
+    flex: 2;
+    padding-left: 0px;
     color: white;
+    gap: 50px;
+    align-items: center;
+    @media (max-width: 767px) {
+        gap: 10px; // reduce the gap between menu items
+      }
 }
 
 .menuItemContainer {
@@ -32,9 +38,17 @@
         animation: createShadow 0.5s ease-in;
         animation-fill-mode: forwards;
     }
+
+    @media (max-width: 767px) {
+        padding: 10px 20px;  // reduce the padding
+        font-size: 14px; // reduce the font size
+      }
 }
 
 .mainIcons {
+    @media (max-width: 767px) {
+        display: none;
+    }
     display: flex;
     padding-left: 50px;
 }
@@ -68,9 +82,15 @@
     font-size: 24px;
     font-weight: 100px;
     color: inherit;
+    @media (max-width: 767px) {
+        font-size: 14px; // reduce the font size
+      }
 }
 
 .icon {
     padding-right: 10px;
     padding-top: 5px;
+    @media (max-width: 767px) {
+        padding-right: 5px; // reduce padding
+      }
 }

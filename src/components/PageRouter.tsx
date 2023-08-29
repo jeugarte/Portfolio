@@ -7,6 +7,7 @@ import ContactPage from '../pages/ContactPage';
 import ProjectsPage from '../pages/ProjectsPage';
 import App from '../App';
 import TopBar from './TopBar';
+import styles from '../styles/PageRouter.module.scss'
 
 
 const PageRouter: React.FC = () => {
@@ -34,9 +35,10 @@ const PageRouter: React.FC = () => {
   return (
     <App>
         <Router>
-          <TopBar />
-          {route}
-          {/* <Redirect exact from="/" to="/home" /> */}
+          <div className={styles.page}>
+            <TopBar />
+            {route}
+          </div>
         </Router>
     </App>
   )
