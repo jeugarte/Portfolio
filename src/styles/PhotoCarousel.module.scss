@@ -8,6 +8,11 @@
     .slick-list {
         overflow: visible;
     }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: auto;
+    }
   
 }
 
@@ -33,6 +38,9 @@
 .slick-slider .slick-track, 
 .slick-slider .slick-list {
     border-radius: 20px !important;
+    @media (max-width: 767px) {
+      border-radius: 10px !important;
+    }
 }
 
 @keyframes bounce {
@@ -49,5 +57,9 @@
 
 .bouncingSlide {
     animation: bounce 1s;
+
+    @media (max-width: 767px) {
+      animation: bounce 1s ease-in-out;
+    }
 }
 

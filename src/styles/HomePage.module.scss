@@ -1,16 +1,28 @@
 .homeContainer {
-    height: 87vh;
-    width: 100vw;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .textContainer {
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding-left: 120px;
     padding-bottom: 30px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        
+      }
 }
 
 @keyframes expand {
@@ -34,6 +46,9 @@
     width: 0;
     animation: typewriter 4s steps(20, end) forwards,
                blink 0.75s step-end infinite;
+    @media (max-width: 767px) {
+        font-size: 36px;  /* Reduce font size */
+    }
 }
 
 .empty {
@@ -54,6 +69,10 @@
     font-size: 72px;
     font-weight: 300;
     max-width: fit-content;
+
+    @media (max-width: 767px) {
+        font-size: 36px;  /* Reduce font size */
+      }
 }
 
 .subsection1 {
@@ -73,8 +92,22 @@
     font-weight: 100;
 }
 
+.subsection1,
+.subsection2,
+.subsection3,
+.subsection4 {
+  /* ... */
+  @media (max-width: 767px) {
+    font-size: 18px;  /* Reduce font size */
+  }
+}
+
 .carouselContainer {
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+        width: 100%;
+      }
 }

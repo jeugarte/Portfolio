@@ -1,0 +1,42 @@
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    height: 87vh;
+    width:93vw;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.iconContainer {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    animation: popin 0.5s ease-in forwards;
+    
+
+    &:hover {
+        animation: popout 0.5s ease-in forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes popout {
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0px 10px 20px 0px black
+    }
+}
+
+@keyframes popin {
+    0% {
+        transform: scale(1.2);
+        box-shadow: 0px 10px 20px 0px black
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px black;
+    }
+}

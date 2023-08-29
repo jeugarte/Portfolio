@@ -8,10 +8,15 @@ import DuoDigitsPage from './DuoDigitsPage';
 import TheWhetherBeePage from './TheWhetherBeePage';
 import DresserPage from './DresserPage';
 import Coding from '../assets/coding.json'
+import { ReactComponent as MenuIcon } from '../assets/menuicon.svg'
 
 const ProjectsPage = () => {
 
     const [activeProject, setActiveProject] = useState<string>("");
+    const [isSidebarVisible, setSidebarVisible] = useState<boolean>(true);
+    const [projectSelected, setProjectSelected] = useState<boolean>(false); // New state to track project selection
+
+
 
     const renderContent = () => {
         switch (activeProject) {
@@ -19,10 +24,6 @@ const ProjectsPage = () => {
                 return (<DuoreadsPage />)
             case 'Duo Digits':
                 return (<DuoDigitsPage />)
-            case 'The Whether App':
-                return (<TheWhetherBeePage />)
-            case 'Dresser':
-                return (<DresserPage />)
             default:
                 return (
                     
@@ -33,20 +34,51 @@ const ProjectsPage = () => {
         }
     }
 
+    React.useEffect(() => {
+        const updateSidebarVisibility = () => {
+            if (window.innerWidth < 768 && projectSelected) {
+                setSidebarVisible(false);
+            } else {
+                setSidebarVisible(true);
+            }
+        };
+    
+        updateSidebarVisibility();
+        window.addEventListener("resize", updateSidebarVisibility);
+    
+        return () => {
+            window.removeEventListener("resize", updateSidebarVisibility);
+        };
+    }, [projectSelected, activeProject]);
+
+    const handleProjectSelect = (project: string) => {
+        setActiveProject(project);
+        if (window.innerWidth < 768) {
+            setSidebarVisible(false);
+        }
+        setProjectSelected(true);
+    };
+
+    const toggleSidebar = () => {
+        setSidebarVisible(!isSidebarVisible);
+    };
+
     return (
         <div className={styles.projectsPageContainer}>
-            <div className={styles.sidebarContainer}>
-                <Sidebar 
-                    onProjectSelect={(project) => setActiveProject(project)} 
-                    activeProject={activeProject}
-                />
-            </div>
+            {isSidebarVisible && (
+                <div className={styles.sidebarContainer}>
+                    <Sidebar 
+                        onProjectSelect={(project) => handleProjectSelect(project)} 
+                        activeProject={activeProject}
+                    />
+                </div>
+            )}
             <div className={styles.pageContainer}>
+                {!isSidebarVisible && projectSelected && <button onClick={toggleSidebar}><MenuIcon /></button>}
                 {renderContent()}
             </div>
         </div>
-        
-    )
+    );
 }
 
 export default ProjectsPage;

@@ -5,7 +5,13 @@
     border: 4px inset RGB(38, 42, 45);
     background-size: cover;
     background-position: center;
-    position:relative
+    position:relative;
+
+    @media (max-width: 767px) {
+        width: 50vw; /* Adjust according to your needs */
+        height: 30vh; /* Adjust according to your needs */
+        border-radius: 10px;
+    }
 }
 
 @keyframes bounce {
@@ -22,4 +28,8 @@
 
 .bounce {
     animation: bounce 3s;
+
+    @media (max-width: 767px) {
+        animation: bounce 3s ease-in-out; /* Adjust animation if needed */
+    }
 }
