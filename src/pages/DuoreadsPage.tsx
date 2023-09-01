@@ -12,7 +12,6 @@ import arrow from '../assets/abarrow.svg'
 
 const DuoreadsPage = () => {
 
-    // Create an array to hold refs
     const featureRefs = useRef<React.RefObject<HTMLDivElement>[]>([]);
     const [isBefore, setIsBefore] = useState<boolean>(true);
 
@@ -71,7 +70,6 @@ const DuoreadsPage = () => {
         },
     ]
 
-    // Dynamically create refs
     featureList.forEach((_, i) => {
         featureRefs.current[i] = React.createRef();
     });
@@ -141,7 +139,7 @@ const DuoreadsPage = () => {
                                     <div className={styles.BAHeader}>
                                         {isBefore ? "Before" : "After"}
                                     </div>
-                                    <img src={arrow} alt="Duoreads" onClick={beforeAfterOnClick} style={{ width: 'auto', height: 'auto' }}/>
+                                    <img src={arrow} alt="Duoreads" onClick={beforeAfterOnClick} style={{ width: 'auto', height: 'auto', cursor: 'pointer' }}/>
                                     
                                 </div> 
                                 <div className={styles.featureContentRight}>

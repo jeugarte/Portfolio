@@ -41,13 +41,13 @@
 
 .typewriter {
     overflow: hidden;
-    border-right: 0.15em solid skyblue; /* Cursor-like effect */
+    border-right: 0.15em solid skyblue;
     white-space: nowrap;
     width: 0;
     animation: typewriter 4s steps(20, end) forwards,
                blink 0.75s step-end infinite;
     @media (max-width: 767px) {
-        font-size: 36px;  /* Reduce font size */
+        font-size: 36px;
     }
 }
 
@@ -55,7 +55,6 @@
     display: flex;
 }
 
-/* Optional - To hide the cursor after the animation completes */
 .typewriter.hid-cursor::after {
     animation: blink 0.75s steps(44, end) infinite;
     border-right: 0;
@@ -71,7 +70,7 @@
     max-width: fit-content;
 
     @media (max-width: 767px) {
-        font-size: 36px;  /* Reduce font size */
+        font-size: 36px;
       }
 }
 
@@ -96,9 +95,8 @@
 .subsection2,
 .subsection3,
 .subsection4 {
-  /* ... */
   @media (max-width: 767px) {
-    font-size: 18px;  /* Reduce font size */
+    font-size: 18px;
   }
 }
 
