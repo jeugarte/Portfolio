@@ -53,7 +53,6 @@ const DuoDigitsPage = () => {
         },
     ]
 
-    // Dynamically create refs
     featureList.forEach((_, i) => {
         featureRefs.current[i] = React.createRef();
     });

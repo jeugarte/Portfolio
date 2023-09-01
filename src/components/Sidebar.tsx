@@ -32,7 +32,7 @@ const Sidebar = ({onProjectSelect, activeProject}: {onProjectSelect: (project: s
         <div className={styles.mainContainer}>
             {sidebarItems.map((section, index) => {
                 return (
-                    <div className={styles.sectionNameContainer}>
+                    <div className={section.isActive ? styles.activeSectionNameContainer : styles.sectionNameContainer}>
                         <SidebarItem key={index} label={section.title} onClick={section.onClick} isActive={section.isActive} />
                     </div>
                 )

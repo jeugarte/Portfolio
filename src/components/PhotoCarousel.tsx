@@ -11,6 +11,8 @@ import photo7 from '../assets/photocard7.jpg';
 import photo8 from '../assets/photocard8.jpg'
 import photo9 from '../assets/photocard9.jpg'
 import photo10 from '../assets/photocard10.jpg'
+import photo11 from '../assets/photocard11.jpg'
+import photo12 from '../assets/photocard12.jpg'
 
 import '../styles/slick.css'; 
 import "slick-carousel/slick/slick-theme.css";
@@ -31,7 +33,7 @@ const PhotoCarousel = () => {
         },
         {
             id: 2,
-            path: photo2
+            path: photo12
         },
         {
             id: 3,
@@ -59,18 +61,13 @@ const PhotoCarousel = () => {
         },
         {
             id: 10,
+            path: photo11
+        },
+        {
+            id: 11,
             path: photo10
         }
     ]
-
-    function ForwardArrow(props: any) {
-        const { onClick } = props;
-        return (
-            <div onClick={onClick} className={styles.forwardButton}>
-                Hello
-            </div>
-        );
-    }
 
     const settings = {
         dots: true,
@@ -81,16 +78,11 @@ const PhotoCarousel = () => {
         autoplay: true,
         autoplaySpeed: 900,
         beforeChange: (current: number, next: number) => {
-            setTimeout(() => setBouncingCards([-1, -1, -1, (next+2) % photos.length]), 0);  // Third card starts bouncing immediately
-            setTimeout(() => setBouncingCards([-1, -1, (next+1)% photos.length, (next+2) % photos.length]), 300);  // Second card starts bouncing after 1 second
-            setTimeout(() => setBouncingCards([-1, (next) % photos.length, (next+1) % photos.length, (next+2) % photos.length]), 600);  // First card starts bouncing after 2 seconds
-            setTimeout(() => setBouncingCards([(current) , (next) % photos.length, (next+1) % photos.length, (next+2) % photos.length]), 900);  // First card starts bouncing after 2 seconds
-
-            // setTimeout(() => setBouncingCards([-1, -1, -1]), 3000);
+            setTimeout(() => setBouncingCards([-1, -1, -1, (next+2) % photos.length]), 0); 
+            setTimeout(() => setBouncingCards([-1, -1, (next+1)% photos.length, (next+2) % photos.length]), 300);
+            setTimeout(() => setBouncingCards([-1, (next) % photos.length, (next+1) % photos.length, (next+2) % photos.length]), 600);
+            setTimeout(() => setBouncingCards([(current) , (next) % photos.length, (next+1) % photos.length, (next+2) % photos.length]), 900);
         },
-        
-    //     nextArrow: <ForwardArrow />,
-    //     prevArrow: <React.Fragment />
     };
 
     return (

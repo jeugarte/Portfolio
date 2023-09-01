@@ -8,8 +8,8 @@
     position:relative;
 
     @media (max-width: 767px) {
-        width: 50vw; /* Adjust according to your needs */
-        height: 30vh; /* Adjust according to your needs */
+        width: 50vw;
+        height: 30vh;
         border-radius: 10px;
     }
 }
@@ -30,6 +30,6 @@
     animation: bounce 3s;
 
     @media (max-width: 767px) {
-        animation: bounce 3s ease-in-out; /* Adjust animation if needed */
+        animation: bounce 3s ease-in-out;
     }
 }

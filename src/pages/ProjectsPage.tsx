@@ -14,9 +14,7 @@ const ProjectsPage = () => {
 
     const [activeProject, setActiveProject] = useState<string>("");
     const [isSidebarVisible, setSidebarVisible] = useState<boolean>(true);
-    const [projectSelected, setProjectSelected] = useState<boolean>(false); // New state to track project selection
-
-
+    const [projectSelected, setProjectSelected] = useState<boolean>(false);
 
     const renderContent = () => {
         switch (activeProject) {
@@ -26,10 +24,7 @@ const ProjectsPage = () => {
                 return (<DuoDigitsPage />)
             default:
                 return (
-                    
                         <Lottie animationData={Coding} loop={true} className={styles.lottieCoding}/>
-                    
-                    
                 )
         }
     }
