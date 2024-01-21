@@ -5,12 +5,10 @@ import photo1 from '../assets/photocard1.jpg'
 import photo2 from '../assets/photocard2.jpg';
 import photo3 from '../assets/photocard3.jpg';
 import photo4 from '../assets/photocard4.jpg'
-import photo5 from '../assets/photocard5.jpg'
 import photo6 from '../assets/photocard6.jpg'
 import photo7 from '../assets/photocard7.jpg';
 import photo8 from '../assets/photocard8.jpg'
 import photo9 from '../assets/photocard9.jpg'
-import photo10 from '../assets/photocard10.jpg'
 import photo11 from '../assets/photocard11.jpg'
 import photo12 from '../assets/photocard12.jpg'
 
@@ -29,7 +27,7 @@ const PhotoCarousel = () => {
         },
         {
             id: 4,
-            path: photo4
+            path: photo6
         },
         {
             id: 2,
@@ -40,12 +38,8 @@ const PhotoCarousel = () => {
             path: photo3
         },
         {
-            id: 5,
-            path: photo5
-        },
-        {
             id: 6,
-            path: photo6
+            path: photo4
         },
         {
             id: 7,
@@ -63,10 +57,6 @@ const PhotoCarousel = () => {
             id: 10,
             path: photo11
         },
-        {
-            id: 11,
-            path: photo10
-        }
     ]
 
     const settings = {
