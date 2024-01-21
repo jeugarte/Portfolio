@@ -7,6 +7,7 @@ import DuoreadsPage from './DuoreadsPage';
 import DuoDigitsPage from './DuoDigitsPage';
 import TheWhetherBeePage from './TheWhetherBeePage';
 import DresserPage from './DresserPage';
+import FillerGapPage from './FillerGapPage';
 import Coding from '../assets/coding.json'
 import { ReactComponent as MenuIcon } from '../assets/menuicon.svg'
 
@@ -22,6 +23,8 @@ const ProjectsPage = () => {
                 return (<DuoreadsPage />)
             case 'Duo Digits':
                 return (<DuoDigitsPage />)
+            case 'RNN Filler Gap Dependency':
+                return (<FillerGapPage/>)
             default:
                 return (
                         <Lottie animationData={Coding} loop={true} className={styles.lottieCoding}/>

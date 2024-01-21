@@ -13,7 +13,7 @@ const HomePage = () => {
                     <div className={styles.empty} />
                 </div>
                 <div className={styles.subsection1}>
-                    Student from Cornell University
+                    Student @ Cornell University
                 </div>
                 <div className={styles.subsection2}>
                     Software Engineer Intern @ Duolingo
@@ -22,7 +22,7 @@ const HomePage = () => {
                     Professional Development Chair for URMC
                 </div>
                 <div className={styles.subsection4}>
-                    TA for CS 3110  
+                    Developer & DEI Lead for Hack4Impact
                 </div>
             </div>
             <div className={styles.carouselContainer}>

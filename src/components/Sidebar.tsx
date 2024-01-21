@@ -17,6 +17,11 @@ const Sidebar = ({onProjectSelect, activeProject}: {onProjectSelect: (project: s
             isActive: activeProject === 'Duo Digits'
         },
         {
+            title: "RNN Filler Gap Dependency",
+            onClick: (() => onProjectSelect("RNN Filler Gap Dependency")),
+            isActive: activeProject === 'RNN Filler Gap Dependency'
+        },
+        {
             title: "The Whether Bee",
             onClick: (() => onProjectSelect("The Whether Bee")),
             isActive: activeProject === 'The Whether Bee'
